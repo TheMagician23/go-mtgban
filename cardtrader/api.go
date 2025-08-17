@@ -93,6 +93,12 @@ const (
 	CategoryLorcanaCompleteSets
 )
 
+type Property struct {
+	Name           string `json:"name"`
+	Type           string `json:"type"`
+	PossibleValues []any  `json:possible_values"`
+}
+
 type Blueprint struct {
 	Id         int    `json:"id"`
 	Name       string `json:"name"`
@@ -115,7 +121,8 @@ type Blueprint struct {
 		Number   string `json:"collector_number"`
 		Language string `json:"mtg_language"`
 	} `json:"fixed_properties"`
-	ExpansionId int `json:"expansion_id"`
+	ExpansionId        int        `json:"expansion_id"`
+	EditableProperties []Property `json:"editable_properties"`
 }
 
 type Product struct {
