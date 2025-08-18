@@ -94,9 +94,9 @@ const (
 )
 
 type Property struct {
-	Name           string `json:"name"`
-	Type           string `json:"type"`
-	PossibleValues []any  `json:possible_values"`
+	Name           string   `json:"name"`
+	Type           string   `json:"type"`
+	PossibleValues []string `json:possible_values"`
 }
 
 type Blueprint struct {
