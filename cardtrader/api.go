@@ -97,7 +97,7 @@ type Property struct {
 	Name           string        `json:"name"`
 	Type           string        `json:"type"`
 	DefaultValue   interface{}   `json:"default_value"`
-	PossibleValues []interface{} `json:possible_values"`
+	PossibleValues []interface{} `json:"possible_values"`
 }
 
 type Blueprint struct {
